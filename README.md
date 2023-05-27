@@ -160,22 +160,25 @@ Connect to one of the EC2 instance<br>
 Switch to the root user:<br>
 
 Run the command: <br>
-
-## sudo -i
+```diff
+-sudo -i
+```
 
 ![36](https://github.com/harshartz/AWS-VPC-Peering-and-EC2-Instance-Connectivity/assets/130890384/022b53d9-cb3d-4068-b72f-c26d73078e73)
 
 Create an empty file with a name of target Ec2's key pair file (e.g., "peering-B"):<br>
 
 Run the command: <br>
-
-## touch peering-B<br>
+```diff
+-touch peering-B
+```
 
 Edit the file and paste the private key of the EC2 instance that you want to connect to:<br>
 
 Run the command: <br>
-
-## vi peering-B<br>
+```diff
+-vi peering-B
+```
 
 ![37](https://github.com/harshartz/AWS-VPC-Peering-and-EC2-Instance-Connectivity/assets/130890384/4b1c3576-6ac6-4a12-a402-ae3065c8167d)
 ![39](https://github.com/harshartz/AWS-VPC-Peering-and-EC2-Instance-Connectivity/assets/130890384/ecc075a8-df0b-41ea-8e9f-b98e3b066de9)
@@ -183,15 +186,16 @@ Run the command: <br>
 Modify the permissions of the file:<br>
 
 Run the command: <br>
-
-## chmod 400 peering-B<br>
+```diff
+-chmod 400 peering-B
+```
 
 Use the SSH command to establish the connection to the other EC2 instance:<br>
 
 Run the command: <br>
-
-## ssh -i <<key-pair-file-name>> ec2-user@<<Target Linux EC2's Private IP>><br>
-
+```diff
+-ssh -i <<key-pair-file-name>> ec2-user@<<Target Linux EC2's Private IP>>
+```
 ![40](https://github.com/harshartz/AWS-VPC-Peering-and-EC2-Instance-Connectivity/assets/130890384/e5a24844-c851-4cf8-b05d-0f686e4b23e0)
 
 Select "yes" to confirm the connection
